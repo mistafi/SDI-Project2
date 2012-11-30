@@ -26,6 +26,13 @@ var amTired = true;
 var howTired = 7;
 	
 
+
+
+
+
+// My output
+
+function prepare (fundsneeded, destinations, tripWeatherConditions, tripDistance) {
 var destinations = [ 
 	"Denver", 
 	"Germantown", 
@@ -70,12 +77,13 @@ var destinations = [
 	"Saturday", 
 	"Sunday" 
 ];
+	for (var i = 0; i < destinations.length; i++) { 
+		console.log(destinations[i] + " is " + tripDistance[i] + " miles away.")
+	};
+	return destinations;
+}
 
-
-
-
-// My output
-
+prepare()
 
 
 if ((tripPlan === true) && (moneyOnHand >= "100")) {
