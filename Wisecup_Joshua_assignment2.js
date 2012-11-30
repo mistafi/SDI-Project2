@@ -70,33 +70,9 @@ var destinations = [
 ];
 
 
-var farFromCel = function (celcius) {
-	// F = ((9 / 5) * C) +32
-	return ((9 / 5) * celcius) +32
-};
-
-var getTotalStops = function () {
-	return tripDistance[i] / carMileage
-};	
-
-//	var i=0, j=tripDistance.length; i < j; i++;  
-// 		console.log(getTotalStops);
-
-var	roundTrip = function () {
-	return tripDistance[i] * 2
-};
 
 
 // My output
-
-for (var i=0, roundtrip=(tripDistance[i] * 2), j=destinations.length; i < j; i++) {
-console.log( destinations[i] + " is " + tripDistance[i] + " miles away. That is " + roundTrip + " miles round trip.");
-};
-
-say("I saved myself eight whole characters.")
-
-say("22C = " + getTotalStops() + "F")
-
 
 
 
