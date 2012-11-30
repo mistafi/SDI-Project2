@@ -1,5 +1,3 @@
-//alert("JavaScript works!");
-
 // Joshua Wisecup
 // SDI 1211
 // Saturday, November 24, 2012 
@@ -9,7 +7,6 @@
 // My variables
 
 var say = function(message) {console.log(message); };
-
 
 var tripPlan = true;
 var moneyforDenver = 300;
@@ -38,6 +35,11 @@ var destinations = [
 	1852, 
 	125, 
 	18 
+],
+	fundsNeeded = [ 
+	300, 
+	120, 
+	40 
 ],
 	carMileage = [ 
 	300 
