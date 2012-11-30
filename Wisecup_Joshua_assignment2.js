@@ -10,31 +10,6 @@
 
 var say = function(message) {console.log(message); };
 
-var farFromCel = function (celcius) {
-	// F = ((9 / 5) * C) +32
-	return ((9 / 5) * celcius) +32
-};
-
-var celFromFar = function (fahrenheit) {
-	// C = (F - 32) * (5 / 9)
-	return (fahrenheit - 32) * (5 / 9)
-};
-
-var isLeapYear = function (year) {
-	// by 4 - true
-	// by 100 - false
-	// by 400 - true
-	var isDivisibleBy = function (numerator, denominator) {
-		var fraction = numerator / denominator;
-		if (fraction === Math.floor(fraction)) { return true}
-		return false;	
-	}
-	if (isDivisibleBy(year, 400)) { return true;}
-	else if (isDivisibleBy(year, 100)) { return false;}
-	else if (isDivisibleBy(year, 4)) { return true;}
-	else {return false};
-
-};
 
 var tripPlan = true;
 var moneyforDenver = 300;
@@ -98,11 +73,14 @@ var destinations = [
 ];
 
 
+var farFromCel = function (celcius) {
+	// F = ((9 / 5) * C) +32
+	return ((9 / 5) * celcius) +32
+};
 
-var getTotalStops = function (t) {
-		var tripStops = tripDistance[i] / carMileage;
-		console.log(tripStops)
-}	
+var getTotalStops = function () {
+	return tripDistance[i] / carMileage
+};	
 
 //	var i=0, j=tripDistance.length; i < j; i++;  
 // 		console.log(getTotalStops);
@@ -113,22 +91,12 @@ var getTotalStops = function (t) {
 // My output
 
 for (var i=0, j=destinations.length; i < j; i++) {
-console.log( destinations[i] + " is " + tripDistance[i] + " miles away.");
+console.log( destinations[i] + " is " + tripDistance[i] + " miles away. That is " + roundTrip + " miles round trip.");
 };
 
 say("I saved myself eight whole characters.")
 
-say("22C = " + farFromCel(22) + "F")
-
-say("71.6F = " + celFromFar(71.6) + "C")
-
-say("2000 is a leap year: " + isLeapYear(2000));  //true
-say("1900 is a leap year: " + isLeapYear(1900));  //false
-say("2008 is a leap year: " + isLeapYear(2008));  //true
-say("2011 is a leap year: " + isLeapYear(2011));  //false
-
-
-say("We have 1852 miles to travel. We'll have to make " + tripStops + " stops for gas.");  //true
+say("22C = " + getTotalStops() + "F")
 
 
 
