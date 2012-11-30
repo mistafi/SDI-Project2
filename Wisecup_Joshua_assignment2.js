@@ -52,11 +52,7 @@ var numOfDays = 1;
 var travelDays = numOfDays+0;
 var amTired = true;
 var howTired = 7;
-
 	
-
-		
-		
 
 var destinations = [ 
 	"Denver", 
@@ -74,9 +70,6 @@ var destinations = [
 	carMileage = [ 
 	300 
 ],
-	totalStops = [
-	function(tripDistance[i] / carMileage) {};
-]
 	tripTemps = [ 
 	50, 
 	45, 
@@ -102,14 +95,25 @@ var destinations = [
 	"Friday", 
 	"Saturday", 
 	"Sunday" 
-]
+];
+
+
+
+var getTotalStops = function (t) {
+		var tripStops = tripDistance[i] / carMileage;
+		console.log(tripStops)
+}	
+
+//	var i=0, j=tripDistance.length; i < j; i++;  
+// 		console.log(getTotalStops);
+
 
 
 
 // My output
 
-for (var i=0, j=tripDistance.length; i < j; i++) {
-console.log(totalStops);
+for (var i=0, j=destinations.length; i < j; i++) {
+console.log( destinations[i] + " is " + tripDistance[i] + " miles away.");
 };
 
 say("I saved myself eight whole characters.")
@@ -124,7 +128,7 @@ say("2008 is a leap year: " + isLeapYear(2008));  //true
 say("2011 is a leap year: " + isLeapYear(2011));  //false
 
 
-say("We have 1852 miles to travel. We'll have to make " + totalStops + "for gas.");  //true
+say("We have 1852 miles to travel. We'll have to make " + tripStops + " stops for gas.");  //true
 
 
 
