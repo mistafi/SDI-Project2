@@ -39,9 +39,6 @@ var destinations = [
 	125, 
 	18 
 ],
-	roundTrip = [ 
-	tripDistance * 2 
-],
 	carMileage = [ 
 	300 
 ],
@@ -85,12 +82,14 @@ var getTotalStops = function () {
 //	var i=0, j=tripDistance.length; i < j; i++;  
 // 		console.log(getTotalStops);
 
-
+var	roundTrip = function () {
+	return tripDistance[i] * 2
+};
 
 
 // My output
 
-for (var i=0, j=destinations.length; i < j; i++) {
+for (var i=0, roundtrip=(tripDistance[i] * 2), j=destinations.length; i < j; i++) {
 console.log( destinations[i] + " is " + tripDistance[i] + " miles away. That is " + roundTrip + " miles round trip.");
 };
 
