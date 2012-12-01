@@ -76,12 +76,7 @@ var destinations = [
 
 if (moneyOnHand >= checkBankMin) {
 	say("We have $" + moneyOnHand + ".")
-} else {
-	say("We are not taking a trip this year for Thanksgiving.")	
-};
-
-if (moneyOnHand >= checkBankMin) {
-	for (var i = 0; i < destinations.length; i++) { 
+		for (var i = 0; i < destinations.length; i++) { 
 				if (moneyOnHand >= fundsNeeded[i]) {
 					console.log("That will be plenty for a trip to " + destinations[i] + ".")			
 				} else {
@@ -97,8 +92,15 @@ if (moneyOnHand >= checkBankMin) {
 			if (moneyOnHand >= fundsNeeded[0]) {
 				console.log("We should go to " + destinations[0] + ".")			
 			};
-			
+} else {
+	say("We are not taking a trip this year for Thanksgiving.")	
 };
+
+if (moneyOnHand >= checkBankMin) {
+	
+
+};
+
 
 
 
