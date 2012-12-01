@@ -75,18 +75,20 @@ var destinations = [
 
 say("We have $" + moneyOnHand + ".")			
 
-var prepare = function (m) {
-	for (var i = 0; i < destinations.length; i++) { 
+for (var i = 0; i < destinations.length; i++) { 
+	if (moneyOnHand > 0) {
 			if (moneyOnHand >= fundsNeeded[i]) {
 				console.log("That will be plenty for a trip to " + destinations[i] + ".")			
 			} else {
 			console.log("We will not have enough money for a trip to " + destinations[i] + ".");
-			return m
-		}
-	}
-};
+			};
+	} else {
+		if (moneyOnHand < fundsNeeded[2]) {
+		console.log("We are not taking a trip this year for Thanksgiving.")	
+		};
+	};
+}
 
-checkBank(m)
 
 
 // step 1: procedure function prepare(m) m=moneyOnHand
