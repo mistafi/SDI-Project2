@@ -72,9 +72,26 @@ var howTired = 7;
 
 
 
-//tripProgress 
+//tripProgress ()
+
 //if this is true, then count progress in increments of 300
-//console.log("300 miles, x amount to go. Don't forget to get gas.")
+// while (tripDistance > 0) { var tripTravelled = tripDistance += 300, var tripRemaining = tripDistance - tripTravelled; };
+//console.log(tripdistance + " miles, x amount to go. Don't forget to get gas.")
+// tripDistance += 300;
+//console.log (We have arrived.)
+
+//else (tripTravelled = 0) { console.log (it looks like we haven't gone anywhere.)}
+
+//return 
+
+
+//step 4 string function
+
+
+//step 5 array function
+
+
+
 
 
 
