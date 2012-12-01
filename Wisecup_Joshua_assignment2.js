@@ -84,10 +84,14 @@ if (moneyOnHand >= 40) {
 				if (moneyOnHand >= fundsNeeded[i]) {
 					console.log("That will be plenty for a trip to " + destinations[i] + ".")			
 				} else {
-				console.log("We will not have enough money for a trip to " + destinations[i] + ".");
+					console.log("We will not have enough money for a trip to " + destinations[i] + ".");
+				};
+				if ((moneyOnHand >= fundsNeeded[2]) && (moneyOnHand < fundsNeeded[1])) {
+					console.log("We should go to " + destinations[2] + ".")			
 				};
 	}
 };
+
 
 
 
