@@ -11,7 +11,7 @@ var say = function(message) {console.log(message); };
 var tripPlan = true;
 var moneyforDenver = 300;
 var moneyforOhio = 100;
-var moneyOnHand = 50*7;
+var moneyOnHand = 25;
 var trip1 = "Denver";
 var trip2 = "Ohio";
 var checkWeather = true;
@@ -24,10 +24,10 @@ var numOfDays = 1;
 var travelDays = numOfDays+0;
 var amTired = true;
 var howTired = 7;
+var checkBank = function(m) {console.log(message); };
 
 // My output
 
-function prepare (fundsneeded, destinations, tripWeatherConditions, tripDistance) {
 var destinations = [ 
 	"Denver", 
 	"Germantown", 
@@ -72,19 +72,22 @@ var destinations = [
 	"Saturday", 
 	"Sunday" 
 ];
+
+say("We have $" + moneyOnHand + ".")			
+
+var prepare = function (m) {
 	for (var i = 0; i < destinations.length; i++) { 
-			if (moneyOnHand > fundsneeded[2] && moneyOnHand <= fundsneeded[0]) {
-				console.log("We have $" + moneyOnHand + ". That will be plenty for our trip to " + destinations[i] + ".")		
+			if (moneyOnHand >= fundsNeeded[i]) {
+				console.log("That will be plenty for a trip to " + destinations[i] + ".")			
 			} else {
-			console.log("We will not have enough money for a trip.");
+			console.log("We will not have enough money for a trip to " + destinations[i] + ".");
+			return m
 		}
-	return destinations;
-}
+	}
+};
 
-prepare()
+checkBank(m)
 
-}
-	
 
 // step 1: procedure function prepare(m) m=moneyOnHand
 //	are we going to take a trip? must have more than 40 dollars
