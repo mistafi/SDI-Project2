@@ -51,7 +51,7 @@ var howTired = 7;
 // if not enough money, then no trip this year
 
 
-// declare global variable tripProgress = onTheRoad (readytogo , d) d=distance of the trip
+// declare global variable tripProgress = onTheRoadfunction (readytogo , d) d=distance of the trip
 //step 2: are we making a trip, did we check the weather function ready(taketrip, weatherCheck)
 //
 //if we are taking a trip and the weather is checked
@@ -63,7 +63,8 @@ var howTired = 7;
 // return readyToGo
 
 
-//declare global variable to hold d/ mpt howManySTops = myfunction(d,mpt)
+//declare global variable to hold d/ mpt howManyStops = myfunction(d,mpt) --- maybe
+
 //step 3: are we making a trip, boolean, function ( d, mpt ) d=distance to destination, mpt=miles per tank of gas
 // if we are driving, d / mpt
 // console.log("we are going to have to stop" +  + "times for gas.")
