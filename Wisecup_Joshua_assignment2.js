@@ -11,7 +11,7 @@ var say = function(message) {console.log(message); };
 var tripPlan = true;
 var moneyforDenver = 300;
 var moneyforOhio = 100;
-var moneyOnHand = 50;
+var moneyOnHand = 300;
 var trip1 = "Denver";
 var trip2 = "Ohio";
 var checkWeather = true;
@@ -24,7 +24,7 @@ var numOfDays = 1;
 var travelDays = numOfDays+0;
 var amTired = true;
 var howTired = 7;
-var checkBank = function(m) {console.log(message); };
+var checkBankMin = 40;
 
 // My output
 
@@ -73,23 +73,31 @@ var destinations = [
 	"Sunday" 
 ];
 
-if (moneyOnHand >= 40) {
+
+if (moneyOnHand >= checkBankMin) {
 	say("We have $" + moneyOnHand + ".")
 } else {
 	say("We are not taking a trip this year for Thanksgiving.")	
 };
 
-if (moneyOnHand >= 40) {
+if (moneyOnHand >= checkBankMin) {
 	for (var i = 0; i < destinations.length; i++) { 
 				if (moneyOnHand >= fundsNeeded[i]) {
 					console.log("That will be plenty for a trip to " + destinations[i] + ".")			
 				} else {
 					console.log("We will not have enough money for a trip to " + destinations[i] + ".");
 				};
-				if ((moneyOnHand >= fundsNeeded[2]) && (moneyOnHand < fundsNeeded[1])) {
-					console.log("We should go to " + destinations[2] + ".")			
-				};
 	}
+			if ((moneyOnHand >= fundsNeeded[2]) && (moneyOnHand < fundsNeeded[1])) {
+				console.log("We should go to " + destinations[2] + ".")			
+			};
+			if ((moneyOnHand >= fundsNeeded[1]) && (moneyOnHand < fundsNeeded[0])) {
+				console.log("We should go to " + destinations[1] + ".")			
+			};
+			if (moneyOnHand >= fundsNeeded[0]) {
+				console.log("We should go to " + destinations[0] + ".")			
+			};
+			
 };
 
 
