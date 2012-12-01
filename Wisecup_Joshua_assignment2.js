@@ -4,125 +4,120 @@
 // Assignment - Project 1
 // Thanksgiving Holiday Trip
 
-// My variables
-
-var say = function(message) {console.log(message); };
-var tripPlan = true;
-var moneyOnHand = 300;
-var checkBankMin = 40;
-var checkWeather = true;
-var driving = true;
-var numOfDays = 1;
-var travelDays = numOfDays+0;
-var amTired = true;
-var howTired = 7;
-
-var destinations = [ 
-	"Denver", 
-	"Germantown", 
-	"Georgetown" 
-],
-	tripDistance = [ 
-	1852, 
-	125, 
-	18 
-],
-	fundsNeeded = [ 
-	300, 
-	120, 
-	40 
-];
-var	carMileage = [ 
-	300 
-];
-var weatherConditions = [ 
-	"sunny", 
-	"cloudy", 
-	"rainy", 
-	"snowy", 
-	"foggy" 
-];
-var	days = [ 
-	"Monday", 
-	"Tuesday", 
-	"Wednesday", 
-	"Thursday", 
-	"Friday", 
-	"Saturday", 
-	"Sunday" 
-],
-	tripTemps = [ 
-	50, 
-	45, 
-	43,
-	52,
-	60,
-	55,
-	62 
-],
-	tripWeatherConditions = [
-	"sunny",
-	"cloudy",
-	"snowy",
-	"sunny",
-	"sunny",
-	"cloudy",
-	"cloudy"
-];
 
 // My output
 
-if (moneyOnHand >= checkBankMin) {
-	var w=true;
-	say("We have $" + moneyOnHand + ".")
-	function tripPrepare() {
-		for (var i = 0; i < destinations.length; i++) { 
-			if (moneyOnHand >= fundsNeeded[i]) {
-				console.log("That will be plenty for a trip to " + destinations[i] + ".")			
-			} else {
-				console.log("We will not have enough money for a trip to " + destinations[i] + ".");
-			};
-	return w
-		}
-	}
-			if (w === true) {
-				console.log("When would be a good time to leave?");
-				console.log("The weather is " + tripWeatherConditions[i] + " on " + days[i] + ".");
-
-					for (var i = 0; i < days.length; i++) { 
-				
-						if ((tripWeatherConditions[i] == "sunny") && (days[i] == "Friday") || (tripWeatherConditions[i] == "sunny") && (days[i] == "Saturday")) {
-							console.log("The weather is " + tripWeatherConditions[i] + " and looks good. We can leave on " + days[i] + ".");
-						};
-					}
-				
-						} else {
-							console.log("We will have to check the forecast for next week!");
-						};
+var bigTripPlan = function() {
 	
-			function chooseTrip()
-				{
-				var d=5;
-				return d;
+	// My variables
+	
+	var say = function(message) {console.log(message); };
+	var tripPlan = true;
+	var moneyOnHand = 120;
+	var checkBankMin = 40;
+	var checkWeather = true;
+	var driving = true;
+	var numOfDays = 1;
+	var travelDays = numOfDays+0;
+	var amTired = true;
+	var howTired = 7;
+	
+	var destinations = [ 
+		"Denver", 
+		"Germantown", 
+		"Georgetown" 
+	],
+		tripDistance = [ 
+		1852, 
+		125, 
+		18 
+	],
+		fundsNeeded = [ 
+		300, 
+		120, 
+		40 
+	];
+	var	carMileage = [ 
+		300 
+	];
+	var weatherConditions = [ 
+		"sunny", 
+		"cloudy", 
+		"rainy", 
+		"snowy", 
+		"foggy" 
+	];
+	var	days = [ 
+		"Monday", 
+		"Tuesday", 
+		"Wednesday", 
+		"Thursday", 
+		"Friday", 
+		"Saturday", 
+		"Sunday" 
+	],
+		tripTemps = [ 
+		50, 
+		45, 
+		43,
+		52,
+		60,
+		55,
+		62 
+	],
+		tripWeatherConditions = [
+		"sunny",
+		"cloudy",
+		"snowy",
+		"sunny",
+		"sunny",
+		"cloudy",
+		"cloudy"
+	];
+
+	if (moneyOnHand >= checkBankMin) {
+		say("We have $" + moneyOnHand + ".")
+				for (var i = 0; i < destinations.length; i++) { 
+					if (moneyOnHand >= fundsNeeded[i]) {
+						console.log("That will be plenty for a trip to " + destinations[i] + ".")			
+					} else {
+						console.log("We will not have enough money for a trip to " + destinations[i] + ".");
+					};
 				}
-			if ((moneyOnHand >= fundsNeeded[2]) && (moneyOnHand < fundsNeeded[1])) {
-				console.log("We should go to " + destinations[2] + ". It is " + tripDistance[2] + " miles away.")			
-			}
-			else if ((moneyOnHand >= fundsNeeded[1]) && (moneyOnHand < fundsNeeded[0])) {
-				console.log("We should go to " + destinations[1] + ". It is " + tripDistance[1] + " miles away.")			
-			}
-			else if (moneyOnHand >= fundsNeeded[0]) {
-				console.log("We should go to " + destinations[0] + ". It is " + tripDistance[0] + " miles away.")			
-			};
+		if (checkWeather === true) {
+			console.log("When would be a good time to leave?");
+				for (var i = 0; i < days.length; i++) { 
+					if ((tripWeatherConditions[i] == "sunny") && (days[i] == "Friday") || (tripWeatherConditions[i] == "sunny") && (days[i] == "Saturday")) {
+						console.log("The weather is " + tripWeatherConditions[i] + " and looks good. We can leave on " + days[i] + ".");
+					};
+				}
 			
+		} else {
+			console.log("We will have to check the forecast for next week!");
+		};
+
+				if ((moneyOnHand >= fundsNeeded[i]) && (moneyOnHand < fundsNeeded[1])) {
+					var d=tripDistance[2]
+					console.log("We should go to " + destinations[2] + ". It is " + tripDistance[2] + " miles away.")			
+				}
+				else if ((moneyOnHand >= fundsNeeded[1]) && (moneyOnHand < fundsNeeded[0])) {
+					var d=tripDistance[1]
+					console.log("We should go to " + destinations[1] + ". It is " + tripDistance[1] + " miles away.")			
+				}
+				else if (moneyOnHand >= fundsNeeded[0]) {
+					var d=tripDistance[0]
+					console.log("We should go to " + destinations[0] + ". It is " + tripDistance[0] + " miles away.")			
+				};
+	
 } else {
 	say("We are not taking a trip this year for Thanksgiving.")	
 };
 
 
+}
 
 
-
+bigTripPlan()
 
 
 // step 1: procedure function prepare(m) m=moneyOnHand
