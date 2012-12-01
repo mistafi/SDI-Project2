@@ -73,34 +73,15 @@ var destinations = [
 	"Sunday" 
 ];
 	for (var i = 0; i < destinations.length; i++) { 
-			if (moneyOnHand > 40 && moneyOnHand < 120) {
-				console.log("We have $" + moneyOnHand + ". That will be plenty for our trip to " + destinations[2] + ".")
-			
-			};
-		console.log(destinations[i] + " is " + tripDistance[i] + " miles away.")
-		console.log("Where are we going for Thanksgiving this year? Does " + destinations[i] + " seem like a good option?");			
-
-			};
-		
-		
-		
-		
-			if ((tripPlan === true) && (moneyOnHand >= "100")) {
-			console.log("Where are we going for Thanksgiving this year, " + destinations[0] + ", " + destinations[1] + ", or " + destinations[2] + "?");
-		if (moneyOnHand >= "100") {
-			console.log("First, do we have enough money for our trip?");
-				if ((moneyOnHand >= moneyforDenver) && (moneyOnHand >= moneyforOhio)) {
-					console.log("We have $" + moneyOnHand + ". That will be plenty for our trip to " + trip1 + ".");
-				} else {
-					console.log("We have $" + moneyOnHand + ". That will not be enough for a trip to " + trip1 + ", but we can make a trip to " + trip2 + ".");
-				};
-		} else {
+			if (moneyOnHand > fundsneeded[2] && moneyOnHand <= fundsneeded[0]) {
+				console.log("We have $" + moneyOnHand + ". That will be plenty for our trip to " + destinations[i] + ".")		
+			} else {
 			console.log("We will not have enough money for a trip.");
 		}
 	return destinations;
 }
 
-prepare(300, "Denver", "sunny", 1852)
+prepare()
 
 }
 	
