@@ -84,6 +84,19 @@ var bigTripPlan = function() {
 						console.log("We will not have enough money for a trip to " + destinations[i] + ".");
 					};
 				}
+					if ((moneyOnHand >= fundsNeeded[i]) && (moneyOnHand < fundsNeeded[1])) {
+						var d=tripDistance[2]
+						console.log("We should go to " + destinations[2] + ". It is " + tripDistance[2] + " miles away.")			
+					}
+					else if ((moneyOnHand >= fundsNeeded[1]) && (moneyOnHand < fundsNeeded[0])) {
+						var d=tripDistance[1]
+						console.log("We should go to " + destinations[1] + ". It is " + tripDistance[1] + " miles away.")			
+					}
+					else if (moneyOnHand >= fundsNeeded[0]) {
+						var d=tripDistance[0]
+						console.log("We should go to " + destinations[0] + ". It is " + tripDistance[0] + " miles away.")			
+					};
+	
 		if (checkWeather === true) {
 			console.log("When would be a good time to leave?");
 				for (var i = 0; i < days.length; i++) { 
@@ -96,19 +109,7 @@ var bigTripPlan = function() {
 			console.log("We will have to check the forecast for next week!");
 		};
 
-				if ((moneyOnHand >= fundsNeeded[i]) && (moneyOnHand < fundsNeeded[1])) {
-					var d=tripDistance[2]
-					console.log("We should go to " + destinations[2] + ". It is " + tripDistance[2] + " miles away.")			
-				}
-				else if ((moneyOnHand >= fundsNeeded[1]) && (moneyOnHand < fundsNeeded[0])) {
-					var d=tripDistance[1]
-					console.log("We should go to " + destinations[1] + ". It is " + tripDistance[1] + " miles away.")			
-				}
-				else if (moneyOnHand >= fundsNeeded[0]) {
-					var d=tripDistance[0]
-					console.log("We should go to " + destinations[0] + ". It is " + tripDistance[0] + " miles away.")			
-				};
-	
+
 } else {
 	say("We are not taking a trip this year for Thanksgiving.")	
 };
