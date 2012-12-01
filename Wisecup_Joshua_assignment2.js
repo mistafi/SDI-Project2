@@ -26,6 +26,61 @@ var amTired = true;
 var howTired = 7;
 	
 
+// step 1: procedure function prepare(m) m=moneyOnHand
+//	are we going to take a trip? must have more than 40 dollars
+//
+//console.log(We have enough money to take a trip for Thanksgiving. Where do you want to go?)
+//
+// a. choose a destination
+// if 40 or more, but less than 120, go to georgetown
+//
+//console.log(We have enough funds. I think we should go to Georgetown.)
+//
+// if 120 or more, but less than 300, go to germantown
+//
+//console.log(We have enough funds. I think we should go to germantown.)
+//
+//if 300 or more, go to denver
+//
+//console.log(We have enough funds. I think we should go to denver.)
+//
+//b. check the weather
+// if weather is good, leave on friday
+// if weather is bad, leave on saturday
+
+// if not enough money, then no trip this year
+
+
+// declare global variable tripProgress = onTheRoad (readytogo , d) d=distance of the trip
+//step 2: are we making a trip, did we check the weather function ready(taketrip, weatherCheck)
+//
+//if we are taking a trip and the weather is checked
+//
+//console.log(We're ready, and on our way!)
+//
+// else console.log (we're not quite ready yet.)
+//
+// return readyToGo
+
+
+//declare global variable to hold d/ mpt howManySTops = myfunction(d,mpt)
+//step 3: are we making a trip, boolean, function ( d, mpt ) d=distance to destination, mpt=miles per tank of gas
+// if we are driving, d / mpt
+// console.log("we are going to have to stop" +  + "times for gas.")
+// return 
+
+
+
+//tripProgress 
+//if this is true, then count progress in increments of 300
+//console.log("300 miles, x amount to go. Don't forget to get gas.")
+
+
+
+
+
+
+
 
 
 
