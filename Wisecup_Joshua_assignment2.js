@@ -49,12 +49,20 @@ var destinations = [
 	tripTemps = [ 
 	50, 
 	45, 
-	43 
+	43,
+	52,
+	60,
+	55,
+	62 
 ],
 	tripWeatherConditions = [
 	"sunny",
 	"cloudy",
-	"snowy"
+	"snowy",
+	"sunny",
+	"sunny",
+	"cloudy",
+	"cloudy"
 ],
 	weatherConditions = [ 
 	"sunny", 
@@ -82,24 +90,36 @@ if (moneyOnHand >= checkBankMin) {
 				} else {
 					console.log("We will not have enough money for a trip to " + destinations[i] + ".");
 				};
-	}
+		}
 			if ((moneyOnHand >= fundsNeeded[2]) && (moneyOnHand < fundsNeeded[1])) {
-				console.log("We should go to " + destinations[2] + ".")			
+				console.log("We should go to " + destinations[2] + ". It is " + tripDistance[2] + " miles away.")			
 			};
 			if ((moneyOnHand >= fundsNeeded[1]) && (moneyOnHand < fundsNeeded[0])) {
-				console.log("We should go to " + destinations[1] + ".")			
+				console.log("We should go to " + destinations[1] + ". It is " + tripDistance[1] + " miles away.")			
 			};
 			if (moneyOnHand >= fundsNeeded[0]) {
-				console.log("We should go to " + destinations[0] + ".")			
+				console.log("We should go to " + destinations[0] + ". It is " + tripDistance[0] + " miles away.")			
 			};
 } else {
 	say("We are not taking a trip this year for Thanksgiving.")	
 };
 
-if (moneyOnHand >= checkBankMin) {
-	
+if (checkWeather === true) {
+	console.log("When would be a good time to leave?");
+	for (var i = 0; i < days.length; i++) { 
+		console.log("The weather is " + tripWeatherConditions[i] + " on " + days[i] + ".");
 
+			if (tripWeatherConditions == "sunny") {
+				console.log("The weather looks good. We can leave on " + days[i] + ".");
+			} else {
+				console.log("There is a possible storm. We will have to wait and leave on " + day2 + ".");
+			};
+	}
+} else {
+	console.log("We cannot plan our trip without checking the forecast first!");
 };
+
+
 
 
 
