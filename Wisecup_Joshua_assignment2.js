@@ -68,7 +68,7 @@ var howTired = 7;
 //step 3: are we making a trip, boolean, function ( d, mpt ) d=distance to destination, mpt=miles per tank of gas
 // if we are driving, d / mpt
 // console.log("we are going to have to stop" +  + "times for gas.")
-// return 
+// return howManyStops
 
 
 
@@ -82,17 +82,17 @@ var howTired = 7;
 
 //else (tripTravelled = 0) { console.log (it looks like we haven't gone anywhere.)}
 
-//return 
+//return value to pass below
 
 
-//step 4 string function
+//step 4 string function myvariable = myfunction (string 1, string 2) { if value from above is true console.log(string1 + stuff + string 2 +)};
 
 
 //step 5 array function
 
 
 
-
+//myfunction (string 1, string 2)
 
 
 
