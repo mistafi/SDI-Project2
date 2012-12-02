@@ -139,7 +139,6 @@ var milesPerGallon = function(totalMiles, milesPerTank, costPerTank) {
 	return numberStops;
 };
 
-
 var motivation = function(driving,message, message1, message2) {
 	if (driving==true) {
 		var traveling = ["I am driving."]
@@ -176,52 +175,10 @@ ready(true, "We\'re ready to go.")
 
 milesPerGallon(1852,300,35)
 
-motivation(true, "Now that you've started your trip, stay alert."," Keep up the good work!", "No worries. We'll be on the road soon.")
+motivation(true, "Now that you've started your trip, stay alert."," Keep up the good work!", "No worries. We\'ll be on the road soon.")
 
 milesRemain(1852,"Denver")
 
 gasStops("Denver", 6)
 
 
-// declare global variable tripProgress = onTheRoadfunction (readytogo , d) d=distance of the trip
-//step 2: are we making a trip, did we check the weather function ready(taketrip, weatherCheck)
-//
-//if we are taking a trip and the weather is checked
-//
-//console.log(We're ready, and on our way!)
-//
-// else console.log (we're not quite ready yet.)
-//
-// return readyToGo
-
-
-//declare global variable to hold d/ mpt howManyStops = myfunction(d,mpt) --- maybe
-
-//step 3: are we making a trip, boolean, function ( d, mpt ) d=distance to destination, mpt=miles per tank of gas
-// if we are driving, d / mpt
-// console.log("we are going to have to stop" +  + "times for gas.")
-// return howManyStops
-
-
-
-//tripProgress ()
-
-//if this is true, then count progress in increments of 300
-// while (tripDistance > 0) { var tripTravelled = tripDistance += 300, var tripRemaining = tripDistance - tripTravelled; };
-//console.log(tripdistance + " miles, x amount to go. Don't forget to get gas.")
-// tripDistance += 300;
-//console.log (We have arrived.)
-
-//else (tripTravelled = 0) { console.log (it looks like we haven't gone anywhere.)}
-
-//return value to pass below
-
-
-//step 4 string function myvariable = myfunction (string 1, string 2) { if value from above is true console.log(string1 + stuff + string 2 +)};
-
-
-//step 5 array function
-
-
-
-//myfunction (string 1, string 2)
