@@ -113,7 +113,7 @@ var bigTripPlan = function() {
 	} else {
 		say("We are not taking a trip this year for Thanksgiving.")	
 	};
-
+return tripDistance;
 }
 
 var ready = function(checkWeather, message) {
@@ -132,20 +132,22 @@ var milesPerGallon = function(totalMiles, milesPerTank, costPerTank) {
 	costPerStop = numberStops * costPerTank;
 	if (numberStops > 0) {
 		console.log("If our drive is " + totalMiles + " miles, then we will have to stop " + numberStops + " times for gas.");
-		console.log("That will cost $" + costPerStop + " in gas for " + numberStops + " stops.");
+		console.log("That will cost about $" + costPerStop + " in gas for " + numberStops + " stops.");
 	} else {
 		console.log("We won't have to fill-up until after we get there.")
 	};
+	return numberStops;
 };
 
 
-var motivation = function(driving,message) {
+var motivation = function(driving,message, message1, message2) {
 	if (driving==true) {
-		console.log(message);
+		var traveling = ["I am driving."]
+		console.log(message + message1);
 	} else {
-		console.log("No worries. We'll be on the road soon.")
+		console.log(message2)
 	};
-	return true;
+	return traveling;
 };
 
 
@@ -163,7 +165,7 @@ ready(true, "We\'re ready to go.")
 
 milesPerGallon(1852,300,35)
 
-motivation(true, "Now that you've started your trip, stay alert and keep up the good work!")
+motivation(true, "Now that you've started your trip, stay alert."," Keep up the good work!", "No worries. We'll be on the road soon.")
 
 milesRemain(1852,"Denver")
 
