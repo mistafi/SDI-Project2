@@ -1,16 +1,14 @@
 // Joshua Wisecup
 // SDI 1211
-// Saturday, November 24, 2012 
-// Assignment - Project 1
-// Thanksgiving Holiday Trip
+// Saturday, December 1, 2012 
+// Assignment - Project 2
+// Thanksgiving Holiday Trip Part 2
 
 
-// My output
+// My variables
 
 var bigTripPlan = function() {
-	
-	// My variables
-	
+		
 	var say = function(message) {console.log(message); };
 	var tripPlan = true;
 	var moneyOnHand = 450;
@@ -145,6 +143,7 @@ var gasStops = function(destination, numberStops) {
 	return stopPoints;
 };
 
+// My output
 
 bigTripPlan()
 
