@@ -17,10 +17,6 @@ var bigTripPlan = function() {
 	var checkBankMin = 40;
 	var checkWeather = true;
 	var driving = true;
-	var numOfDays = 1;
-	var travelDays = numOfDays+0;
-	var amTired = true;
-	var howTired = 7;
 	
 	var destinations = [ 
 		"Denver", 
@@ -37,16 +33,6 @@ var bigTripPlan = function() {
 		120, 
 		40 
 	];
-	var	carMileage = [ 
-		300 
-	];
-	var weatherConditions = [ 
-		"sunny", 
-		"cloudy", 
-		"rainy", 
-		"snowy", 
-		"foggy" 
-	];
 	var	days = [ 
 		"Monday", 
 		"Tuesday", 
@@ -55,15 +41,6 @@ var bigTripPlan = function() {
 		"Friday", 
 		"Saturday", 
 		"Sunday" 
-	],
-		tripTemps = [ 
-		50, 
-		45, 
-		43,
-		52,
-		60,
-		55,
-		62 
 	],
 		tripWeatherConditions = [
 		"sunny",
