@@ -139,6 +139,14 @@ var milesPerGallon = function(totalMiles, milesPerTank, costPerTank) {
 };
 
 
+var motivation = function(driving,message) {
+	if (driving==true) {
+		console.log(message);
+	} else {
+		console.log("No worries. We'll be on the road soon.")
+	};
+	return true;
+};
 
 
 bigTripPlan()
@@ -147,7 +155,7 @@ ready(true, "We\'re ready to go.")
 
 milesPerGallon(1852,300,35)
 
-
+motivation(true, "Now that you've started your trip, stay alert and keep up the good work!")
 
 // declare global variable tripProgress = onTheRoadfunction (readytogo , d) d=distance of the trip
 //step 2: are we making a trip, did we check the weather function ready(taketrip, weatherCheck)
