@@ -125,8 +125,8 @@ var ready = function(checkWeather, message) {
 	return true;
 };
 
-var milesPerGallon = function(352) {
-	var numberStops = tripDistance / 352;
+var milesPerGallon = function('352') {
+	var numberStops = tripDistance / "352";
 	if (numberStops > 0) {
 		console.log("We\'ve got some work to do before we leave.");
 	} else {
