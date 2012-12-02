@@ -125,20 +125,33 @@ var ready = function(checkWeather, message) {
 	return true;
 };
 
-var milesPerGallon = function('352') {
-	var numberStops = tripDistance / "352";
+var milesPerGallon = function(totalMiles, gasPerTank) {
+	var numberStops;
+	numberStops = totalMiles / gasPerTank;
 	if (numberStops > 0) {
-		console.log("We\'ve got some work to do before we leave.");
+		console.log("We will have to stop " + numberStops + " times for gas.");
 	} else {
-		console.log("We\'ve got some work to do before we leave.")
+		console.log("We won't have to fill-up until after we get there.")
 	};
 };
+
+
+var calculateSalary = function (employeeName, hoursWorked, payRatePerHour) {
+var totalSalary;
+totalSalary = hoursWorked * payRatePerHour;
+document.write (employeeName + ", your salary for this week is: $" + totalSalary + "<br>");
+};
+
+
+
+milesPerGallon(1852,300)
 
 bigTripPlan()
 
 ready(true, "We\'re ready to go.")
 
-
+calculateSalary ("Steve", 25, 30);
+calculateSalary ("John", 40, 40);
 
 
 // declare global variable tripProgress = onTheRoadfunction (readytogo , d) d=distance of the trip
