@@ -13,7 +13,7 @@ var bigTripPlan = function() {
 	
 	var say = function(message) {console.log(message); };
 	var tripPlan = true;
-	var moneyOnHand = 120;
+	var moneyOnHand = 450;
 	var checkBankMin = 40;
 	var checkWeather = true;
 	var driving = true;
@@ -33,7 +33,7 @@ var bigTripPlan = function() {
 		18 
 	],
 		fundsNeeded = [ 
-		300, 
+		450, 
 		120, 
 		40 
 	];
@@ -125,33 +125,28 @@ var ready = function(checkWeather, message) {
 	return true;
 };
 
-var milesPerGallon = function(totalMiles, gasPerTank) {
+var milesPerGallon = function(totalMiles, milesPerTank, costPerTank) {
 	var numberStops;
-	numberStops = totalMiles / gasPerTank;
+	numberStops = Math.floor(totalMiles / milesPerTank);
+	var costPerStop;
+	costPerStop = numberStops * costPerTank;
 	if (numberStops > 0) {
-		console.log("We will have to stop " + numberStops + " times for gas.");
+		console.log("If our drive is " + totalMiles + " miles, then we will have to stop " + numberStops + " times for gas.");
+		console.log("That will cost $" + costPerStop + " in gas for " + numberStops + " stops.");
 	} else {
 		console.log("We won't have to fill-up until after we get there.")
 	};
 };
 
 
-var calculateSalary = function (employeeName, hoursWorked, payRatePerHour) {
-var totalSalary;
-totalSalary = hoursWorked * payRatePerHour;
-document.write (employeeName + ", your salary for this week is: $" + totalSalary + "<br>");
-};
 
-
-
-milesPerGallon(1852,300)
 
 bigTripPlan()
 
 ready(true, "We\'re ready to go.")
 
-calculateSalary ("Steve", 25, 30);
-calculateSalary ("John", 40, 40);
+milesPerGallon(1852,300,35)
+
 
 
 // declare global variable tripProgress = onTheRoadfunction (readytogo , d) d=distance of the trip
