@@ -110,40 +110,35 @@ var bigTripPlan = function() {
 		};
 
 
-} else {
-	say("We are not taking a trip this year for Thanksgiving.")	
-};
-
+	} else {
+		say("We are not taking a trip this year for Thanksgiving.")	
+	};
 
 }
 
+var ready = function(checkWeather, message) {
+	if (checkWeather==true) {
+		console.log(message);
+	} else {
+		console.log("We\'ve got some work to do before we leave.")
+	};
+	return true;
+};
+
+var milesPerGallon = function(352) {
+	var numberStops = tripDistance / 352;
+	if (numberStops > 0) {
+		console.log("We\'ve got some work to do before we leave.");
+	} else {
+		console.log("We\'ve got some work to do before we leave.")
+	};
+};
 
 bigTripPlan()
 
+ready(true, "We\'re ready to go.")
 
-// step 1: procedure function prepare(m) m=moneyOnHand
-//	are we going to take a trip? must have more than 40 dollars
-//
-//console.log(We have enough money to take a trip for Thanksgiving. Where do you want to go?)
-//
-// a. choose a destination
-// if 40 or more, but less than 120, go to georgetown
-//
-//console.log(We have enough funds. I think we should go to Georgetown.)
-//
-// if 120 or more, but less than 300, go to germantown
-//
-//console.log(We have enough funds. I think we should go to germantown.)
-//
-//if 300 or more, go to denver
-//
-//console.log(We have enough funds. I think we should go to denver.)
-//
-//b. check the weather
-// if weather is good, leave on friday
-// if weather is bad, leave on saturday
 
-// if not enough money, then no trip this year
 
 
 // declare global variable tripProgress = onTheRoadfunction (readytogo , d) d=distance of the trip
