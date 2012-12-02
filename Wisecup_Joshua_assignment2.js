@@ -149,6 +149,14 @@ var motivation = function(driving,message) {
 };
 
 
+var milesRemain = function(milesThisTrip, destination) {
+	for (var miles = 0; miles < milesThisTrip; miles += 300) {
+			var milesRemain = milesThisTrip - miles;
+			console.log("We have " + milesRemain + " miles left. We have gone " + miles + " miles.");
+	}
+	console.log("We made it to " + destination + ".");
+};
+
 bigTripPlan()
 
 ready(true, "We\'re ready to go.")
@@ -156,6 +164,10 @@ ready(true, "We\'re ready to go.")
 milesPerGallon(1852,300,35)
 
 motivation(true, "Now that you've started your trip, stay alert and keep up the good work!")
+
+milesRemain(1852,"Denver")
+
+
 
 // declare global variable tripProgress = onTheRoadfunction (readytogo , d) d=distance of the trip
 //step 2: are we making a trip, did we check the weather function ready(taketrip, weatherCheck)
